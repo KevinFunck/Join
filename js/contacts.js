@@ -122,7 +122,6 @@ function deleteContact(id) {
     const contact = contacts.find(contact => contact.id === id);
     const index = contacts.indexOf(contact);
     contacts.splice(index, 1);
-    contactDetailsEl.classList.add('d-none');
     setItem('contacts', contacts);
     renderContactList();
     notify('Succesfully deleted!');
